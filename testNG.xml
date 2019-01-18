@@ -1,0 +1,10 @@
+<suite name="MeSTestSuite">
+	<test name="MeSTest">
+		<parameter name = "browsername" value="Chrome"/>
+		<parameter name="filteroption" value="Contains"/>
+		<parameter name="textval" value="AnubhaMeS"/>
+		<classes>
+			<class name="tests.NewUsersAndFilters"></class>
+		</classes>
+	</test>
+</suite>

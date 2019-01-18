@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [MeSTestSuite]">
+  <parameter name="filteroption" value="Contains"/>
+  <parameter name="textval" value="Abhisheik"/>
+  <parameter name="browsername" value="Chrome"/>
+  <test name="MeSTest(failed)">
+    <parameter name="filteroption" value="Contains"/>
+    <parameter name="textval" value="Abhisheik"/>
+    <parameter name="browsername" value="Chrome"/>
+    <classes>
+      <class name="tests.NewUsersAndFilters">
+        <methods>
+          <include name="createNewUser"/>
+          <include name="userFilters" invocation-numbers="0"/>
+          <include name="tearOff"/>
+          <include name="configurations"/>
+        </methods>
+      </class> <!-- tests.NewUsersAndFilters -->
+    </classes>
+  </test> <!-- MeSTest(failed) -->
+</suite> <!-- Failed suite [MeSTestSuite] -->
