@@ -12,8 +12,8 @@ public class ElementVerificationsAndActions {
 	WebDriverWait wait;
 	
 	public ElementVerificationsAndActions(WebDriver driver) {
-		this.driver = driver; // initialing the driver of this class
-		wait = new WebDriverWait(driver, 10);// declaring or defining the ex wait
+		this.driver = driver;
+		wait = new WebDriverWait(driver, 10);
 	}
 
 	public boolean clickElement(WebElement element) {
@@ -45,9 +45,9 @@ public class ElementVerificationsAndActions {
 		result = wait.until(ExpectedConditions.visibilityOf(element));
 				if(!(result==null)) {
 			elementstate=true;
-		}
 		Select sel = new Select(element);
 		sel.selectByVisibleText(filtertp);
+	}
 		return elementstate;
 	}
 	public void enterText(WebElement element, String text) {

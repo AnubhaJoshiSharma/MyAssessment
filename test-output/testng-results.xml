@@ -2,17 +2,17 @@
 <testng-results skipped="0" failed="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="MeSTestSuite" duration-ms="37211" started-at="2019-01-18T13:08:34Z" finished-at="2019-01-18T13:09:11Z">
+  <suite name="MeSTestSuite" duration-ms="27798" started-at="2019-01-21T03:06:40Z" finished-at="2019-01-21T03:07:08Z">
     <groups>
       <group name="usertests">
-        <method signature="NewUsersAndFilters.createNewUser()[pri:1, instance:tests.NewUsersAndFilters@c038203]" name="createNewUser" class="tests.NewUsersAndFilters"/>
-        <method signature="NewUsersAndFilters.negativeTest()[pri:3, instance:tests.NewUsersAndFilters@c038203]" name="negativeTest" class="tests.NewUsersAndFilters"/>
-        <method signature="NewUsersAndFilters.userFilters(java.lang.String, java.lang.String)[pri:2, instance:tests.NewUsersAndFilters@c038203]" name="userFilters" class="tests.NewUsersAndFilters"/>
+        <method signature="NewUsersAndFilters.createNewUser()[pri:1, instance:tests.NewUsersAndFilters@3e6fa38a]" name="createNewUser" class="tests.NewUsersAndFilters"/>
+        <method signature="NewUsersAndFilters.negativeTest()[pri:3, instance:tests.NewUsersAndFilters@3e6fa38a]" name="negativeTest" class="tests.NewUsersAndFilters"/>
+        <method signature="NewUsersAndFilters.userFilters(java.lang.String, java.lang.String)[pri:2, instance:tests.NewUsersAndFilters@3e6fa38a]" name="userFilters" class="tests.NewUsersAndFilters"/>
       </group> <!-- usertests -->
     </groups>
-    <test name="MeSTest" duration-ms="37211" started-at="2019-01-18T13:08:34Z" finished-at="2019-01-18T13:09:11Z">
+    <test name="MeSTest" duration-ms="27798" started-at="2019-01-21T03:06:40Z" finished-at="2019-01-21T03:07:08Z">
       <class name="tests.NewUsersAndFilters">
-        <test-method status="PASS" signature="configurations(java.lang.String)[pri:0, instance:tests.NewUsersAndFilters@c038203]" name="configurations" is-config="true" duration-ms="6408" started-at="2019-01-18T08:08:34Z" finished-at="2019-01-18T08:08:41Z">
+        <test-method status="PASS" signature="configurations(java.lang.String)[pri:0, instance:tests.NewUsersAndFilters@3e6fa38a]" name="configurations" is-config="true" duration-ms="7526" started-at="2019-01-20T22:06:40Z" finished-at="2019-01-20T22:06:48Z">
           <params>
             <param index="0">
               <value>
@@ -23,15 +23,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configurations -->
-        <test-method status="PASS" signature="createNewUser()[pri:1, instance:tests.NewUsersAndFilters@c038203]" name="createNewUser" duration-ms="12328" started-at="2019-01-18T08:08:41Z" finished-at="2019-01-18T08:08:53Z">
+        <test-method status="PASS" signature="createNewUser()[pri:1, instance:tests.NewUsersAndFilters@3e6fa38a]" name="createNewUser" duration-ms="1792" started-at="2019-01-20T22:06:48Z" finished-at="2019-01-20T22:06:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createNewUser -->
-        <test-method status="PASS" signature="tearOff()[pri:0, instance:tests.NewUsersAndFilters@c038203]" name="tearOff" is-config="true" duration-ms="1406" started-at="2019-01-18T08:08:53Z" finished-at="2019-01-18T08:08:54Z">
+        <test-method status="PASS" signature="tearOff()[pri:0, instance:tests.NewUsersAndFilters@3e6fa38a]" name="tearOff" is-config="true" duration-ms="1721" started-at="2019-01-20T22:06:49Z" finished-at="2019-01-20T22:06:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearOff -->
-        <test-method status="PASS" signature="configurations(java.lang.String)[pri:0, instance:tests.NewUsersAndFilters@c038203]" name="configurations" is-config="true" duration-ms="5454" started-at="2019-01-18T08:08:54Z" finished-at="2019-01-18T08:09:00Z">
+        <test-method status="PASS" signature="configurations(java.lang.String)[pri:0, instance:tests.NewUsersAndFilters@3e6fa38a]" name="configurations" is-config="true" duration-ms="5935" started-at="2019-01-20T22:06:51Z" finished-at="2019-01-20T22:06:57Z">
           <params>
             <param index="0">
               <value>
@@ -42,7 +42,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configurations -->
-        <test-method status="PASS" signature="userFilters(java.lang.String, java.lang.String)[pri:2, instance:tests.NewUsersAndFilters@c038203]" name="userFilters" duration-ms="1543" started-at="2019-01-18T08:09:00Z" finished-at="2019-01-18T08:09:01Z">
+        <test-method status="PASS" signature="userFilters(java.lang.String, java.lang.String)[pri:2, instance:tests.NewUsersAndFilters@3e6fa38a]" name="userFilters" duration-ms="1334" started-at="2019-01-20T22:06:57Z" finished-at="2019-01-20T22:06:58Z">
           <params>
             <param index="0">
               <value>
@@ -51,18 +51,18 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[Anubha]]>
+                <![CDATA[AnubhaMeS]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- userFilters -->
-        <test-method status="PASS" signature="tearOff()[pri:0, instance:tests.NewUsersAndFilters@c038203]" name="tearOff" is-config="true" duration-ms="1215" started-at="2019-01-18T08:09:01Z" finished-at="2019-01-18T08:09:02Z">
+        <test-method status="PASS" signature="tearOff()[pri:0, instance:tests.NewUsersAndFilters@3e6fa38a]" name="tearOff" is-config="true" duration-ms="1241" started-at="2019-01-20T22:06:58Z" finished-at="2019-01-20T22:07:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearOff -->
-        <test-method status="PASS" signature="configurations(java.lang.String)[pri:0, instance:tests.NewUsersAndFilters@c038203]" name="configurations" is-config="true" duration-ms="5515" started-at="2019-01-18T08:09:02Z" finished-at="2019-01-18T08:09:08Z">
+        <test-method status="PASS" signature="configurations(java.lang.String)[pri:0, instance:tests.NewUsersAndFilters@3e6fa38a]" name="configurations" is-config="true" duration-ms="5301" started-at="2019-01-20T22:07:00Z" finished-at="2019-01-20T22:07:05Z">
           <params>
             <param index="0">
               <value>
@@ -73,14 +73,18 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configurations -->
-        <test-method status="PASS" signature="negativeTest()[pri:3, instance:tests.NewUsersAndFilters@c038203]" name="negativeTest" duration-ms="2047" started-at="2019-01-18T08:09:08Z" finished-at="2019-01-18T08:09:10Z">
+        <test-method status="PASS" signature="negativeTest()[pri:3, instance:tests.NewUsersAndFilters@3e6fa38a]" name="negativeTest" duration-ms="1760" started-at="2019-01-20T22:07:05Z" finished-at="2019-01-20T22:07:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- negativeTest -->
-        <test-method status="PASS" signature="tearOff()[pri:0, instance:tests.NewUsersAndFilters@c038203]" name="tearOff" is-config="true" duration-ms="1271" started-at="2019-01-18T08:09:10Z" finished-at="2019-01-18T08:09:11Z">
+        <test-method status="PASS" signature="tearOff()[pri:0, instance:tests.NewUsersAndFilters@3e6fa38a]" name="tearOff" is-config="true" duration-ms="1109" started-at="2019-01-20T22:07:07Z" finished-at="2019-01-20T22:07:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearOff -->
+        <test-method status="PASS" signature="flushReport()[pri:0, instance:tests.NewUsersAndFilters@3e6fa38a]" name="flushReport" is-config="true" duration-ms="57" started-at="2019-01-20T22:07:08Z" finished-at="2019-01-20T22:07:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flushReport -->
       </class> <!-- tests.NewUsersAndFilters -->
     </test> <!-- MeSTest -->
   </suite> <!-- MeSTestSuite -->

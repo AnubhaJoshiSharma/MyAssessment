@@ -2,10 +2,16 @@ package tests;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
+import reusableMethods.Reports;
 import reusableMethods.RequiredCapabilities;
 import screenElements.NewUser;
 import screenElements.Users;
@@ -17,18 +23,22 @@ public class NewUsersAndFilters extends RequiredCapabilities {
 	NewUser newuser;
 	Users users;
 	boolean result;
+	ExtentReports report;
+	ExtentTest test;
 
 	@BeforeMethod
 	@Parameters({ "browsername" })
 	public void configurations(String browsername) {
 		driver = setCapabilities(browsername);
+		report = Reports.getInstance();
 		dashboard = new Dashboard(driver);
 		users = new Users(driver);
 		newuser = new NewUser(driver);
 	}
 
 	@Test(groups = { "usertests"}, priority = 1)
-	public void createNewUser() throws InterruptedException {
+	public void createNewUser() {
+		test = report.startTest("New User Creation Test - Positive");
 		result = dashboard.verifyDashboard();
 		Assert.assertTrue(result, "Dashboard not present");
 		result = dashboard.ClickUsersTab();
@@ -42,12 +52,13 @@ public class NewUsersAndFilters extends RequiredCapabilities {
 		result = newuser.visibility_Password();
 		Assert.assertTrue(result, "Password input box is not visible");
 		newuser.enterNewUserDataAndSubmit("AnubhaMeS", "sharma", "anubha@abc.com");
-		Thread.sleep(10000);
-	}
+		test.log(LogStatus.PASS, "User created successfully");
+		}
 
 	@Test(groups = { "usertests"}, priority = 2)
 	@Parameters({ "filteroption", "textval" })
 	public void userFilters(String filteroption, String textval) {
+		test = report.startTest("Existing User Search Test");
 		result = dashboard.verifyDashboard();
 		Assert.assertTrue(result, "Dashboard not present");
 		result = dashboard.ClickUsersTab();
@@ -56,12 +67,13 @@ public class NewUsersAndFilters extends RequiredCapabilities {
 		Assert.assertTrue(result, "Username field not found");
 		users.enterUserName(textval);
 		result = users.clickFilterButton();
-		Assert.assertTrue(result, "Filter button not found");
-		
+		Assert.assertTrue(result, "User search failed");
+		test.log(LogStatus.PASS, "User Search Successful");
 	}
 
 	@Test(groups = { "usertests" }, priority = 3)
 	public void negativeTest() {
+		test = report.startTest("User Creation without valid password");
 		result = dashboard.verifyDashboard();
 		Assert.assertTrue(result, "Dashboard not present");
 		result = dashboard.ClickUsersTab();
@@ -77,11 +89,13 @@ public class NewUsersAndFilters extends RequiredCapabilities {
 		newuser.enterNewUserDataAndSubmit("Anubha", "123", "anubha@test.com");
 		result = newuser.checkErrorMessage();
 		Assert.assertTrue(result, "Password error message not present");
+		test.log(LogStatus.PASS, "Invalid password input validation done successfully");
 	}
 
 	@AfterMethod
 	public void tearOff() {
 		driver.quit();
+		report.endTest(test);
+		report.flush();
 	}
-
 }
